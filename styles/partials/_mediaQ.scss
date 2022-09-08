@@ -4,6 +4,9 @@
       padding:0px;
       background-attachment: fixed;
     }
+    .hidden{
+      @include hide-element;
+    }
     .box{
       width: 80vw;
       margin: 0 auto;

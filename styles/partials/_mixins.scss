@@ -2,3 +2,8 @@
     color: $color;
     width: $width;
 }
+@mixin hide-element() {
+    position: absolute;
+    top: -11111px;
+    left: -11111px;
+}
