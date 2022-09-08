@@ -1,0 +1,17 @@
+%flexRow{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+%flexColumn{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+%basicSlide{
+    position: relative;
+    align-self: center;
+    overflow: hidden;
+    height: 100%;
+}

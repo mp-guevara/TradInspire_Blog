@@ -1,0 +1,9 @@
+.grid{
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: max-content;
+    grid-template-rows: 2fr 3fr 1fr;
+  }
+  

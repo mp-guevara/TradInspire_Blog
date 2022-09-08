@@ -1,0 +1,82 @@
+.header{
+    grid-area: header;
+    @extend %flexRow;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: map-get($colors, bgColor );
+    border: map-get($borders, borderStyle );
+    opacity: 0.9;
+  }
+  #logo{
+    margin: 0 auto;
+    position: relative;
+    padding-left: 60px;
+  }
+    .navbar{
+        grid-area: header;
+        @extend %flexRow;
+        align-content: space-between;
+        padding-right: 60px;
+        padding-bottom: 10px;
+        font-weight: bold;
+            ul{
+              @extend %flexRow;
+              justify-content: space-between;
+              align-content: space-between;
+              li{
+                  list-style-type: none;
+                  padding-left: 10px;
+                  margin: 0;
+               a{
+                  text-decoration: none;
+                  color: map-get($colors, linksColor);
+                  padding: 10px;
+                  &:hover{color: map-get($color, hoverColor ) }  
+                  }
+              }
+          }
+          
+    }
+    .dropdown{
+        float: none;
+        overflow: hidden;
+        i:hover{
+           color: map-get($colors, hoverColor ); }
+        .dropbtn{
+           border:none;
+           outline:none;
+           color: map-get($colors, linksColor );
+           padding-left: 20px;
+           padding-right: 20px;
+           background-color: map-get($colors, bgColor );
+           font-family: inherit;
+        }
+        &:hover .dropdown-content {
+            display: list-item;
+            list-style: none;
+          }
+    }
+       .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: map-get($colors, bgColor );
+        min-width: 160px;
+        z-index: 1;
+        ul{
+          display: flex;
+          flex-direction: column;
+          li{
+              list-style-type: none;
+              color: $bgColor;
+              font-size: smaller;
+              a{text-decoration: none;
+                color:map-get($colors, linksColor);} 
+          }    
+        }
+    }
+    #about{
+        color: map-get($colors, linksColor );
+        text-decoration: none;
+        &:hover{ color: map-get($colors, hoverColor );
+        }
+    }
