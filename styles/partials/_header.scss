@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: baseline;
     background-color: map-get($colors, bgColor );
-    border: map-get($borders, borderStyle );
+    @include borders ($borderColor,thin);
     opacity: 0.9;
   }
   #logo{

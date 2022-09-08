@@ -12,7 +12,7 @@ footer{
     z-index:1000;
     @extend %flexRow;
     justify-content:space-between;
-    border: map-get($borders, borderStyle );
+    @include borders($borderColor, thin);
     a{
       border-color: map-get($colors, borderColor );
     }
