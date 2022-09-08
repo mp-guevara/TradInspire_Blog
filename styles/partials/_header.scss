@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: baseline;
     background-color: map-get($colors, bgColor );
-    @include borders ($borderColor,thin);
+    @include border (#bdc991, solid);
     opacity: 0.9;
   }
   #logo{
@@ -31,7 +31,7 @@
                   text-decoration: none;
                   color: map-get($colors, linksColor);
                   padding: 10px;
-                  &:hover{color: map-get($color, hoverColor ) }  
+                  &:hover{color: map-get($colors, hoverColor ) }  
                   }
               }
           }
@@ -65,9 +65,11 @@
         ul{
           display: flex;
           flex-direction: column;
+          float:left;
+
           li{
               list-style-type: none;
-              color: $bgColor;
+              color: map-get($colors, bgColor );
               font-size: smaller;
               a{text-decoration: none;
                 color:map-get($colors, linksColor);} 

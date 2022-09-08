@@ -1,6 +1,6 @@
-@mixin borders ($color, $width){
+@mixin border ($color, $border-style) {
     color: $color;
-    width: $width;
+    border-style: solid;
 }
 @mixin hide-element() {
     position: absolute;

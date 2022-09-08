@@ -1,11 +1,30 @@
-.header {
-  grid-area: header;
+footer .footerDiv, footer, .box, .grid-layout, .navbar ul, .navbar, .header {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mainDon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.CSSgal {
+  position: relative;
+  align-self: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.header {
+  grid-area: header;
   justify-content: space-between;
   align-items: baseline;
   background-color: #fbede9;
-  border: solid thin #bdc991;
+  color: #bdc991;
+  border-style: solid;
   opacity: 0.9;
 }
 
@@ -17,16 +36,12 @@
 
 .navbar {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
   align-content: space-between;
   padding-right: 60px;
   padding-bottom: 10px;
   font-weight: bold;
 }
 .navbar ul {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-content: space-between;
 }
@@ -37,7 +52,7 @@
 }
 .navbar ul li a {
   text-decoration: none;
-  color: #000;
+  color: #000000;
   padding: 10px;
 }
 .navbar ul li a:hover {
@@ -54,7 +69,7 @@
 .dropdown .dropbtn {
   border: none;
   outline: none;
-  color: #000;
+  color: #000000;
   padding-left: 20px;
   padding-right: 20px;
   background-color: #fbede9;
@@ -75,6 +90,7 @@
 .dropdown-content ul {
   display: flex;
   flex-direction: column;
+  float: left;
 }
 .dropdown-content ul li {
   list-style-type: none;
@@ -83,11 +99,11 @@
 }
 .dropdown-content ul li a {
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 
 #about {
-  color: #000;
+  color: #000000;
   text-decoration: none;
 }
 #about:hover {
@@ -114,8 +130,6 @@ body {
 
 .grid-layout {
   grid-area: main;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -126,9 +140,6 @@ body {
   padding: 40px;
   overflow: hidden;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 .box a {
   text-decoration: none;
@@ -140,7 +151,8 @@ body {
   transform: scale(1.3);
 }
 .box img {
-  border: solid #768152;
+  color: #768152;
+  border-style: solid;
   border-radius: 5%;
   transform: scale(1);
   transition: 0.3s ease-in-out;
@@ -154,7 +166,7 @@ body {
   border-radius: 25px;
   padding-left: 10px;
   text-align: center;
-  color: #000;
+  color: #000000;
   font-size: larger;
   z-index: 2;
 }
@@ -171,16 +183,14 @@ footer {
   background-color: #fbede9;
   opacity: 0.9;
   z-index: 1000;
-  display: flex;
-  flex-flow: row;
   justify-content: space-between;
-  border: solid thin #bdc991;
+  color: #bdc991;
+  border-style: solid;
 }
 footer a {
-  border-color: #000;
+  border-color: #bdc991;
 }
 footer .footerDiv {
-  display: flex;
   align-items: flex-start;
   flex-flow: row;
   padding: 10px;
@@ -191,7 +201,7 @@ footer .footerDiv ul li {
 }
 footer .footerDiv ul li a {
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 footer .footerDivUno {
   padding: 10px;
@@ -199,6 +209,7 @@ footer .footerDivUno {
 }
 footer .footerDivUno h4 {
   padding-bottom: 20px;
+  color: #000000;
 }
 footer .footerDivDos {
   padding: 10px;
@@ -211,6 +222,7 @@ footer .footerDivDos a img {
 }
 footer .footerDivDos h4 {
   padding-bottom: 10px;
+  color: #000000;
 }
 
 @media only screen and (max-width: 768px) {
@@ -218,6 +230,11 @@ footer .footerDivDos h4 {
     margin: 0px auto;
     padding: 0px;
     background-attachment: fixed;
+  }
+  .hidden {
+    position: absolute;
+    top: -11111px;
+    left: -11111px;
   }
   .box {
     width: 80vw;
@@ -277,4 +294,218 @@ footer .footerDivDos h4 {
   footer {
     height: auto;
   }
+}
+/*DONDE ESTUDIAR*/
+.gridDon {
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 2fr 3fr 1fr;
+  grid-row-gap: 50%;
+}
+
+.mainDon {
+  grid-area: main;
+  grid-gap: 50px;
+  opacity: 0.9;
+  align-items: flex-start;
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+
+.mainDon h2 {
+  text-align: center;
+  align-self: center;
+  text-shadow: 2px -2px 0 rgba(235, 174, 174, 0.5803921569);
+}
+
+.CSSgal .slider .bg1 {
+  background: linear-gradient(to top, #e95, #fdebe9);
+}
+
+.CSSgal .slider .bg2 {
+  background: linear-gradient(to top, #e59, #fdebe9);
+}
+
+.CSSgal .slider .bg3 {
+  background: linear-gradient(to top, #e95, #fdebe9);
+}
+
+.CSSgal .slider .bg4 {
+  background: linear-gradient(to top, #e59, #fdebe9);
+}
+
+.bg1 ul li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.bg2 ul li {
+  list-style-type: none;
+}
+
+.bg3 ul li {
+  list-style-type: none;
+}
+
+.bg4 ul li {
+  list-style-type: none;
+}
+
+.CSSgal .slider {
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  transition: 0.8s;
+}
+
+.CSSgal .slider > * {
+  font-size: 1rem;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  background: none 50% no-repeat;
+  background-size: cover;
+}
+
+.CSSgal .prevNext {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  height: 0;
+}
+
+.CSSgal .prevNext > div + div {
+  visibility: hidden;
+}
+
+.CSSgal .prevNext a {
+  background: #fdebe9;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  opacity: 0.7;
+  transition: 0.3s;
+  transform: translateY(-50%);
+  left: 0;
+}
+.CSSgal .prevNext a:hover {
+  opacity: 1;
+}
+
+.CSSgal .prevNext a + a {
+  left: auto;
+  right: 0;
+}
+
+.CSSgal .bullets {
+  z-index: 2;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.CSSgal .bullets > a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.CSSgal .bullets > a + a {
+  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+}
+
+.CSSgal .bullets > a:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.CSSgal > s:target ~ .bullets > * {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#s1:target ~ .bullets > *:nth-child(1) {
+  background: rgb(255, 255, 255);
+}
+
+#s2:target ~ .bullets > *:nth-child(2) {
+  background: rgb(255, 255, 255);
+}
+
+#s3:target ~ .bullets > *:nth-child(3) {
+  background: rgb(255, 255, 255);
+}
+
+#s4:target ~ .bullets > *:nth-child(4) {
+  background: rgb(255, 255, 255);
+}
+
+.CSSgal > s:target ~ .prevNext > * {
+  visibility: hidden;
+}
+
+#s1:target ~ .prevNext > *:nth-child(1) {
+  visibility: visible;
+}
+
+#s2:target ~ .prevNext > *:nth-child(2) {
+  visibility: visible;
+}
+
+#s3:target ~ .prevNext > *:nth-child(3) {
+  visibility: visible;
+}
+
+#s4:target ~ .prevNext > *:nth-child(4) {
+  visibility: visible;
+}
+
+#s1:target ~ .slider {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+}
+
+#s2:target ~ .slider {
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+#s3:target ~ .slider {
+  transform: translateX(-200%);
+  -webkit-transform: translateX(-200%);
+}
+
+#s4:target ~ .slider {
+  transform: translateX(-300%);
+  -webkit-transform: translateX(-300%);
+}
+
+.CSSgal {
+  color: #fdebe9;
+  text-align: center;
+}
+
+.CSSgal .slider h2 {
+  margin-top: 10vh;
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  word-spacing: 0.2em;
+  font-size: 3em;
+  padding-bottom: 10px;
+}
+
+.CSSgal a {
+  border-radius: 50%;
+  margin: 0 3px;
+  color: #000;
+  text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */
