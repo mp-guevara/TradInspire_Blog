@@ -422,7 +422,7 @@ footer .footerDivDos h4 {
 }
 
 .CSSgal .bullets > a + a {
-  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .CSSgal .bullets > a:hover {
