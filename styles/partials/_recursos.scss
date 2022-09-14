@@ -1,0 +1,56 @@
+/*RECURSOS*/
+.gridRec{
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 2fr 3fr 1fr;
+    grid-row-gap: 50%;
+  }
+  .mainRec{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    background: linear-gradient(to bottom, transparent, #fdebe9);
+    margin-top:  50px;
+    margin-bottom: 50px;
+    h2{
+        text-align: center;
+        padding-top: 100px;
+        text-shadow: 2px -2px 0 #ebaeae94;
+        background: linear-gradient(to top, transparent, #fbede9);
+      }
+}
+  
+  .secRec{
+    grid-area: main;
+    display:flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 50px;
+  }
+  .divRec{
+      border: solid thin #bdc991;
+      margin-right: 10px;
+      background-color: #fdf2f2;
+      padding: 40px;
+      display:flex;
+      flex-direction: column;
+      flex: 40px;
+      justify-content: center;
+      text-align: center;
+  }
+  .divRec {
+    ul {
+        li{
+            list-style-type: none;
+            padding: auto;
+        }
+    }
+  }
+ 

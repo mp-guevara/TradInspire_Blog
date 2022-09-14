@@ -1,0 +1,79 @@
+/*CONTACTO*/
+.mainCont{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    align-items: center;
+    h3{
+    text-align: center;
+    align-self: center;
+    text-shadow: 2px -2px 0 #ebaeae94;
+    }
+}
+
+.secForm{
+    background-color: #fdf2f2;
+    border-radius: 5px;
+    border: solid thin #fcaebc;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    flex: content;
+    position: relative;
+	z-index: 0;
+	overflow: hidden;
+	
+    &::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #fbede9;
+        background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#fcaebc, #fbede9 );
+		animation: rotate 7s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: #fbede9;
+		border-radius: 5px;
+	}
+}
+
+@keyframes rotate {
+    100%{
+        transform: rotate(1turn);
+    }
+    
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    text-align: left;
+    border: double thin #bdc991;
+    background-color: #fbede9;
+    padding: 30px;
+}
+
+.divForm{
+    input[type="radio"]{
+        display: inline;
+        appearance: radio;
+    }
+}

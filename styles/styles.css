@@ -21,7 +21,7 @@ footer .footerDiv, footer, .box, .grid-layout, .navbar ul, .navbar, .header {
 .header {
   grid-area: header;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
   background-color: #fbede9;
   color: #bdc991;
   border-style: solid;
@@ -29,7 +29,7 @@ footer .footerDiv, footer, .box, .grid-layout, .navbar ul, .navbar, .header {
 }
 
 #logo {
-  margin: 0 auto;
+  margin: auto;
   position: relative;
   padding-left: 60px;
 }
@@ -83,14 +83,17 @@ footer .footerDiv, footer, .box, .grid-layout, .navbar ul, .navbar, .header {
 .dropdown-content {
   display: none;
   position: absolute;
+  right: 20px;
   background-color: #fbede9;
-  min-width: 160px;
+  min-width: 180px;
   z-index: 1;
 }
 .dropdown-content ul {
   display: flex;
   flex-direction: column;
   float: left;
+  align-content: flex-start;
+  align-items: stretch;
 }
 .dropdown-content ul li {
   list-style-type: none;
@@ -237,17 +240,20 @@ footer .footerDivDos h4 {
     left: -11111px;
   }
   .box {
-    width: 80vw;
+    width: 100vw;
     margin: 0 auto;
     height: 250px;
     border: solid thin #bdc991;
     background-color: #fbede9;
     opacity: 0.9;
-    padding: 40px 0px;
+    z-index: -1;
   }
   .box a {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-end;
     justify-content: flex-start;
   }
   .box a img {
@@ -259,13 +265,8 @@ footer .footerDivDos h4 {
     width: -moz-fit-content;
     width: fit-content;
   }
-  .header {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
   #logo {
-    padding-left: 250px;
+    padding-left: 168px;
   }
   .navbar {
     padding-right: 40px;
@@ -273,6 +274,18 @@ footer .footerDivDos h4 {
   }
   .navbar ul li {
     padding-left: 20px;
+  }
+  .dropdown-content {
+    min-width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
+    z-index: 4;
+    border-bottom: solid medium;
+    border-left: solid medium;
+    border-right: solid medium;
+  }
+  .dropdown-content ul {
+    align-content: stretch;
+    align-items: stretch;
   }
   .dropdown-content ul li {
     font-size: medium;
@@ -292,7 +305,26 @@ footer .footerDivDos h4 {
     padding-left: 60px;
   }
   footer {
+    display: block;
     height: auto;
+    width: auto;
+  }
+  .redes {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 570) {
+  .box {
+    width: 100vw;
+    margin: 0 auto;
+    height: 250px;
+    border: solid thin #bdc991;
+    background-color: #fbede9;
+    opacity: 0.9;
+    padding: 40px 50px;
   }
 }
 /*DONDE ESTUDIAR*/
@@ -508,4 +540,260 @@ footer .footerDivDos h4 {
   margin: 0 3px;
   color: #000;
   text-decoration: none;
+}
+
+/*CONTACTO*/
+.mainCont {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  align-items: center;
+}
+.mainCont h3 {
+  text-align: center;
+  align-self: center;
+  text-shadow: 2px -2px 0 rgba(235, 174, 174, 0.5803921569);
+}
+
+.secForm {
+  background-color: #fdf2f2;
+  border-radius: 5px;
+  border: solid thin #fcaebc;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  flex: content;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.secForm::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #fbede9;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#fcaebc, #fbede9);
+  -webkit-animation: rotate 7s linear infinite;
+          animation: rotate 7s linear infinite;
+}
+.secForm::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: #fbede9;
+  border-radius: 5px;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  text-align: left;
+  border: double thin #bdc991;
+  background-color: #fbede9;
+  padding: 30px;
+}
+
+.divForm input[type=radio] {
+  display: inline;
+  -webkit-appearance: radio;
+     -moz-appearance: radio;
+          appearance: radio;
+}
+
+/*RECURSOS*/
+.gridRec {
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 2fr 3fr 1fr;
+  grid-row-gap: 50%;
+}
+
+.mainRec {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  background: linear-gradient(to bottom, transparent, #fdebe9);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.mainRec h2 {
+  text-align: center;
+  padding-top: 100px;
+  text-shadow: 2px -2px 0 rgba(235, 174, 174, 0.5803921569);
+  background: linear-gradient(to top, transparent, #fbede9);
+}
+
+.secRec {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 50px;
+}
+
+.divRec {
+  border: solid thin #bdc991;
+  margin-right: 10px;
+  background-color: #fdf2f2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  flex: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.divRec ul li {
+  list-style-type: none;
+  padding: auto;
+}
+
+/*BLOGS*/
+.mainBlogs {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.mainBlogs h2 {
+  text-align: center;
+  align-self: center;
+  text-shadow: 2px -2px 0 rgba(235, 174, 174, 0.5803921569);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+[type=radio] {
+  display: none;
+}
+
+#slideBlog {
+  height: 30vw;
+  width: 95vw;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+#slideBlog label {
+  margin: auto;
+  width: 85%;
+  height: 80%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(-30%, 0, -200px);
+}
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(-15%, 0, -100px);
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
+  transform: translate3d(0, 0, 0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(15%, 0, -100px);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(30%, 0, -200px);
+}
+
+#slide1 {
+  background-image: url(../images/xsBlogPabloMuguerza.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#slide2 {
+  background-image: url(../images/blogPaulaPlazas.png);
+  background-position: center;
+  background-size: contain;
+  background-color: #fdf2f2;
+  background-repeat: no-repeat;
+}
+
+#slide3 {
+  background-image: url(../images/elartedetraducir.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #cae5dc;
+}
+
+#slide4 {
+  background-image: url(../images/enLaLunaDeBabel.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #8e8d88;
+}
+
+#slide5 {
+  background-image: url(../images/tradumei_firma_mail.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fefefe;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0px auto;
+    padding: 0px;
+    background-attachment: fixed;
+    height: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

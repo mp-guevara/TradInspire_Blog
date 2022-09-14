@@ -2,13 +2,13 @@
     grid-area: header;
     @extend %flexRow;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-end;
     background-color: map-get($colors, bgColor );
     @include border (#bdc991, solid);
     opacity: 0.9;
   }
   #logo{
-    margin: 0 auto;
+    margin: auto;
     position: relative;
     padding-left: 60px;
   }
@@ -59,13 +59,16 @@
        .dropdown-content{
         display: none;
         position: absolute;
+        right: 20px;
         background-color: map-get($colors, bgColor );
-        min-width: 160px;
+        min-width: 180px;
         z-index: 1;
         ul{
           display: flex;
           flex-direction: column;
           float:left;
+          align-content: flex-start;
+          align-items: stretch;
 
           li{
               list-style-type: none;
