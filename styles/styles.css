@@ -29,6 +29,8 @@ footer .footerDiv, footer, .box, .grid-layout, .navbar ul, .navbar, .header {
 }
 
 #logo {
+  width: 170px;
+  height: 120px;
   margin: auto;
   position: relative;
   padding-left: 60px;

@@ -8,6 +8,8 @@
     opacity: 0.9;
   }
   #logo{
+    width: 170px;
+    height: 120px;
     margin: auto;
     position: relative;
     padding-left: 60px;
@@ -41,14 +43,14 @@
         float: none;
         overflow: hidden;
         i:hover{
-           color: map-get($colors, hoverColor ); }
+           color: map-get($colors, hoverColor); }
         .dropbtn{
            border:none;
            outline:none;
-           color: map-get($colors, linksColor );
+           color: map-get($colors, linksColor);
            padding-left: 20px;
            padding-right: 20px;
-           background-color: map-get($colors, bgColor );
+           background-color: map-get($colors, bgColor);
            font-family: inherit;
         }
         &:hover .dropdown-content {
