@@ -7,12 +7,12 @@ footer{
     position:static;
     text-align: center;
     padding:2%;
-    background-color:map-get($colors, bgColor );
+    background: linear-gradient(to top, #fbede9, #ffffff);
+    border: thin solid #bebebe;
     opacity: 0.9;
     z-index:1000;
     @extend %flexRow;
     justify-content:space-between;
-    @include border (#bdc991, solid);
     a{
       border-color: map-get($colors, borderColor );
     }
@@ -53,5 +53,17 @@ footer{
       }
     }
   }
-
-  
+@media only screen and (max-width:768px) {
+  footer{
+    display: block;
+    height: auto;
+    width: auto;
+  }
+  .redes{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  } 
+} 
+ 

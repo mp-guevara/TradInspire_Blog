@@ -3,11 +3,12 @@
     @extend %flexRow;
     align-items: center;
     justify-content: space-evenly;
+    padding-top: 33px;
   }
   .box{
     width: 200px;
     height: 400px;
-    padding: 40px;
+    padding: 75px;
     overflow: hidden;
     text-align: center;
     @extend %flexRow;

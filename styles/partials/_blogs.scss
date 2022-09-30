@@ -36,6 +36,7 @@
         left: 0; right: 0;
         cursor: pointer;
         transition: transform 0.4s ease;
+        z-index: 1;
       }
   }
   
@@ -107,13 +108,11 @@
   background-color: #fefefe;
   }
 
-  @media only screen and (max-width: 768px){
-    body{
-      margin:0px auto;
-      padding:0px;
-      background-attachment: fixed;
-      height: 100%;
+  @media only screen and (max-width: 768px) {
+    .mainBlogs{
+      position: relative;
+      z-index: -1;
     }
-}
+  }
   
   

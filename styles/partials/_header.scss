@@ -1,89 +1,208 @@
-.header{
+header{
     grid-area: header;
     @extend %flexRow;
     justify-content: space-between;
     align-items: flex-end;
-    background-color: map-get($colors, bgColor );
-    @include border (#bdc991, solid);
+    background: linear-gradient(to top, #fbede9, #ffffff);
+    border: thin solid #bebebe;
     opacity: 0.9;
-  }
-  #logo{
-    width: 170px;
-    height: 120px;
-    margin: auto;
-    position: relative;
-    padding-left: 60px;
-  }
     .navbar{
-        grid-area: header;
+      grid-area: header;
+      @extend %flexRow;
+      align-content: space-between;
+      padding-right: 60px;
+      padding-bottom: 10px;
+      font-weight: bold;
+      ul{
         @extend %flexRow;
+        justify-content: space-between;
         align-content: space-between;
-        padding-right: 60px;
-        padding-bottom: 10px;
-        font-weight: bold;
-            ul{
-              @extend %flexRow;
-              justify-content: space-between;
-              align-content: space-between;
-              li{
-                  list-style-type: none;
-                  padding-left: 10px;
-                  margin: 0;
-               a{
-                  text-decoration: none;
-                  color: map-get($colors, linksColor);
-                  padding: 10px;
-                  &:hover{color: map-get($colors, hoverColor ) }  
-                  }
-              }
+        li{
+          list-style-type: none;
+          padding-left: 10px;
+          margin: 0;
+          a{
+            text-decoration: none;
+            color: map-get($colors, linksColor);
+            padding: 10px;
           }
-          
-    }
-    .dropdown{
+        }
+      }
+      .dropdown{
         float: none;
         overflow: hidden;
-        i:hover{
-           color: map-get($colors, hoverColor); }
+        z-index: 10;
         .dropbtn{
            border:none;
            outline:none;
            color: map-get($colors, linksColor);
            padding-left: 20px;
            padding-right: 20px;
-           background-color: map-get($colors, bgColor);
+           background-color: #faefeb;
            font-family: inherit;
         }
         &:hover .dropdown-content {
-            display: list-item;
-            list-style: none;
-          }
-    }
-       .dropdown-content{
-        display: none;
-        position: absolute;
-        right: 20px;
-        background-color: map-get($colors, bgColor );
-        min-width: 180px;
-        z-index: 1;
-        ul{
-          display: flex;
-          flex-direction: column;
-          float:left;
-          align-content: flex-start;
-          align-items: stretch;
-
-          li{
+          display: block;
+          list-style: none;
+        }
+        .dropdown-content{
+          display: none;
+          position: absolute;
+          right: 20px;
+          background-color: map-get($colors, bgColor );
+          min-width: 235px;
+          z-index: 10;
+          animation: growDown 300ms ease-in-out forwards;
+          transform-origin: top center;
+          ul{
+            display: flex;
+            flex-direction: column;
+            float:left;
+            align-content: flex-start;
+            align-items: stretch;
+            position: absolute;
+            background-color: #fbede9;
+            background-clip: content-box;
+            li{
               list-style-type: none;
               color: map-get($colors, bgColor );
-              font-size: smaller;
-              a{text-decoration: none;
-                color:map-get($colors, linksColor);} 
-          }    
+              font-size: medium;
+              display: inline-block;
+              position: relative;
+              margin: 0;
+              border-bottom: 1px solid #fff;
+              width: auto;
+              border-radius: 5px;
+              &:hover{
+                background-color:  #fb7f9685;
+              }
+              a {
+                text-decoration: none;
+                color:map-get($colors, linksColor);
+                line-height: 25px;
+                padding: 10px;
+                border-radius: 3px;
+              } 
+            }    
+          }
         }
+      }  
     }
+  }
+  
+  @keyframes growDown{
+    0%{
+      transform: scaleY(0);
+    }
+    80%{
+      transform: scaleY(1.1);
+    }
+    100%{
+      transform: scaleY(1);
+    }
+  }
+  #logo{
+    width: 125px;
+    height: 125px;
+    margin: auto;
+    position: relative;
+    padding-left: 60px;
+  }
+  .hidden {
+    &:hover{
+      background-color: #fb7f967c;
+     }  
+  }   
+    
+    
     #about{
         color: map-get($colors, linksColor );
         text-decoration: none;
-        &:hover{ color: map-get($colors, hoverColor );
+    }
+    @media only screen and (max-width: 768px){
+      body{
+        margin:0px auto;
+        padding:0px;
+        background-attachment: fixed;
+      }
+      #logo{
+        padding-left: calc(100vw/2);
+      }
+      header{
+        position: static;
+        .navbar{
+          position: static;
+          width: 100%;
+          ul{
+              li{
+                  padding-left: 20px;
+                }
+          }
         }
+      }
+      .dropdown-content { 
+        font-stretch: extra-expanded;
+        font-weight: 200;
+        font-variant-caps: all-small-caps;
+        line-height: 50px;
+        width: 100vw;
+        z-index: 100;
+        ul{
+          align-content: stretch;
+          align-items: stretch;
+          width: 100%;
+          overflow: auto;
+          &:hover{
+            display: block;
+          }
+          li{
+            font-size: x-large;
+          }
+        }
+    } 
+      .hidden{
+        @include hide-element;
+      }
+      .box{
+        width: 100vw;
+        margin: 0 auto;
+        height: 250px;
+        border:solid thin #bdc991;
+        background-color: #fbede9;
+        opacity: 0.9;
+        z-index: -1;
+        a{
+          display: flex;
+          flex-direction: row;
+          align-content: space-between;
+          flex-wrap: nowrap;
+          align-items: flex-end;
+          justify-content:flex-start;
+          img{
+            border-radius: 100%;
+            border: solid thin #768152;
+          }
+        }
+      }
+      .grid{
+        width: fit-content;
+      } 
+      // .header{
+      //   width: auto;
+      // }
+      
+      .grid-layout{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-gap: 60px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+      }
+      .text{
+        font-family: inherit;
+        font-size: x-large;
+        padding-left: 60px;
+      }
     }

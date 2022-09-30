@@ -1,14 +1,4 @@
 /*DONDE ESTUDIAR*/
-
-.gridDon{
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-    grid-template-columns: 100%;
-    grid-template-rows: 2fr 3fr 1fr;
-    grid-row-gap: 50%;
-  }
   .mainDon{
     grid-area: main;
     grid-gap: 50px;
@@ -17,143 +7,111 @@
     align-items: flex-start;
     margin-top: 55px;
     margin-bottom: 55px;
+    background: radial-gradient(#fbede9, transparent);
+    h2{
+      text-align: center;
+      align-self: center;
+      color: #000;
+      text-shadow: 2px -2px 0 #8e8d8896;
+      z-index: 4;
+      }
   }
 
-  .mainDon {
-     h2{
-    text-align: center;
+  .CSSgal {
+    position: relative;
     align-self: center;
-    text-shadow: 2px -2px 0 #ebaeae94;
+    overflow: hidden;
+    height: 100%; 
+    color: #fdebe9;	
+    text-align: center;
+    a {
+      border-radius: 50%;
+      margin: 0 3px;
+      color: #000;
+      text-decoration: none;
     }
-  }
-
-  .CSSgal {
-   @extend %basicSlide;
-  }
-  
-  .CSSgal{
     .slider {
-        .bg1{
-            background: linear-gradient(to top, #e95, #fdebe9);
-        }
-    }
-  } 
-  .CSSgal {
-    .slider{
-        .bg2{
-            background: linear-gradient(to top, #e59, #fdebe9);
-        }
-    } 
+      height: 100%;
+      white-space: nowrap;
+      font-size: 0;
+      transition: 0.8s;
+      h3 {
+        color: #000;
+        left: cacl(100%/2);
+        margin-top: 10vh;
+        font-weight: 200;
+        letter-spacing: -0.06em;
+        word-spacing: 0.2em;
+        font-size: 2em;
+        padding-bottom: 10px;
+      }
+     } 
   }
-  .CSSgal{
-    .slider {
-        .bg3{
-            background: linear-gradient(to top, #e95, #fdebe9);
-        }
-    } 
-  } 
-  .CSSgal{
-    .slider{
-        .bg4{
-            background: linear-gradient(to top, #e59, #fdebe9);
-        }
-    } 
-  } 
-  .bg1{
-    ul{
-        li{
-            list-style-type: none;
-            text-align: center;
-        }
-    } 
-  } 
-  .bg2{
-    ul{
-        li{
-            list-style-type: none;
-        }
-    } 
-  } 
-  .bg3{
-    ul{
-        li {
-            list-style-type: none;
-        }
-    } 
-  } 
-  .bg4{
+  .bg1, .bg2,.bg3, .bg4{
     ul {
-        li{
-            list-style-type: none;
-        }
-    }
-  } 
-  .CSSgal{
-    .slider {
-        height: 100%;
-        white-space: nowrap;
-        font-size: 0;
-        transition: 0.8s;
+      line-height: 25px;
+      li{
+        list-style-type: none;
+        text-align: center;
       }
+    } 
+  } 
+ 
+  .CSSgal{
+    .slider > * {
+      font-size: 1rem;
+      display: inline-block;
+      white-space: normal;
+      vertical-align: top;
+      height: 100%;
+      width: 100%;
+      background: none 50% no-repeat;
+      background-size: cover;
+    }
   } 
   
   .CSSgal {
-    .slider > * {
-        font-size: 1rem;
-        display: inline-block;
-        white-space: normal;
-        vertical-align: top;
-        height: 100%;
-        width: 100%;
-        background: none 50% no-repeat;
-        background-size: cover;
-      }
-  }
-  .CSSgal {
     .prevNext {
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        width: 100%;
-        height: 0;
-      }
-  }
-   
-  .CSSgal{
-    .prevNext > div+div {
-        visibility: hidden; 
-      } 
-     }
-
-  .CSSgal{
-    .prevNext {
-        a {
-            background: #fdebe9;
-            position: absolute;
-            width:       60px;
-            height:      60px;
-            line-height: 60px; 
-            text-align: center;
-            opacity: 0.7;
-            -webkit-transition: 0.3s;
-                  transition: 0.3s;
-            -webkit-transform: translateY(-50%);
-                 transform: translateY(-50%);
-            left: 0;
-          }
-          a:hover {
-            opacity: 1;
-          }
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 100%;
+      height: 0;
     }
   } 
+   
   .CSSgal {
-    .prevNext {
-      a+a {
-        left: auto;
-        right: 0;
+    .prevNext > div+div {
+      visibility: hidden; 
+    }
+  } 
+    
+  .CSSgal{
+    .prevNext a {
+      background: #ffffff;
+      position: absolute;
+      width:       60px;
+      height:      60px;
+      line-height: 60px; 
+      text-align: center;
+      opacity: 0.7;
+      -webkit-transition: 0.3s;
+            transition: 0.3s;
+      -webkit-transform: translateY(-50%);
+           transform: translateY(-50%);
+      left: 0;
+      &:hover{
+        opacity: 1;
       }
     }
-  }
+  } 
+  
+  .CSSgal{
+    .prevNext a+a {
+      left: auto;
+      right: 0;
+    }
+  } 
     
   .CSSgal{
     .bullets {
@@ -163,8 +121,9 @@
       width: 100%;
       text-align: center;
     }
-  }
-  .CSSgal {
+  } 
+
+  .CSSgal{
     .bullets > a {
       display: inline-block;
       width:       30px;
@@ -172,27 +131,26 @@
       line-height: 30px;
       text-decoration: none;
       text-align: center;
-      background: rgba(255, 255, 255, 1);
+      background: #ffffff;
       -webkit-transition: 0.3s;
             transition: 0.3s;
-    }
-  }
-  .CSSgal{
-    .bullets > a+a {
-      background: rgba(255, 255, 255, 0.5); 
+      &:hover {
+        background: #fbede9 !important;
+        opacity: 0.9 !important;
+      }
     }
   } 
-
-  .CSSgal {
-    .bullets > a:hover {
-      background: rgba(255, 255, 255, 0.7) !important;
+  .CSSgal{
+    .bullets > a+a {
+      background: #ffffff;
     }
-  }
-  .CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
-    #s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
-    #s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
-    #s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
-    #s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+  } 
+  .CSSgal .bullets > 
+  .CSSgal >s:target ~ .bullets >* {      background: #ffffff;}
+    #s1:target ~ .bullets >*:nth-child(1) {background: #ffffff;}
+    #s2:target ~ .bullets >*:nth-child(2) {background:#ffffff;}
+    #s3:target ~ .bullets >*:nth-child(3) {background: #ffffff;}
+    #s4:target ~ .bullets >*:nth-child(4) {background: #ffffff;}
   
   .CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
   #s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
@@ -205,29 +163,87 @@
   #s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
   #s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
   
+
+  
+  @media only screen and (max-width: 768px){
+    .mainDon{
+      position: relative;
+      z-index: -1;
+    }
+  //   body{
+  //     margin:0px auto;
+  //     padding:0px;
+  //     background-attachment: fixed;
+  //   }
+  //   #logo{
+  //     padding-left: calc(100vw/2);
+  //   }
+  //   header{
+  //     position: static;
+  //     .navbar{
+  //       position: static;
+  //       width: 100%;
+  //       ul{
+  //           li{
+  //               padding-left: 20px;
+  //             }
+  //       }
+  //     }
+  //   }
+  //   .dropdown-content { 
+  //     font-stretch: extra-expanded;
+  //     font-weight: 200;
+  //     font-variant-caps: all-small-caps;
+  //     line-height: 50px;
+  //     width: 100vw;
+  //     z-index: 4;
+  //     ul{
+  //       align-content: stretch;
+  //       align-items: stretch;
+  //       width: 100%;
+  //       overflow: auto;
+  //       &:hover{
+  //        z-index: 10;
+  //       }
+  //       li{
+  //         font-size: x-large;
+  //       }
+  //     }
+  // } 
+  // .hidden{
+  //   @include hide-element;
+  // }
   .CSSgal{
-      color: #fdebe9;	
-      text-align: center;
-  }
-  .CSSgal{
-    .slider {
-      h2 {
-        margin-top: 10vh;
-        font-weight: 200;
-        letter-spacing: -0.06em;
-        word-spacing: 0.2em;
-        font-size: 3em;
-      padding-bottom: 10px;
+    display:flex;
+    flex-direction: column;
+    .slider{
+      display: flex;
+      flex-direction: column;
+      .bg1, .bg2, .bg3, .bg4{
+        display: block;
+        background-color: linear-gradient(to bottom, #fbede9, #ffffff);
+        margin: 5px 10px 5px 0px;
+        border: thin solid map-get($colors, borderColor);
+      }
+      .prevNext{
+       @include hide-element;
+      }
+      .bullets{
+        @include hide-element;
       }
     }
   }
-  .CSSgal {
-    a {
-      border-radius: 50%;
-      margin: 0 3px;
-      color: #000;
-      text-decoration: none;
+  .CSSgal{
+    .prevNext a{
+      @include hide-element;
+    }
+  } 
+
+  .CSSgal{
+    .bullets > a {
+      @include hide-element;
     }
   }
-  
+}
+    
   
