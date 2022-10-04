@@ -254,7 +254,6 @@ body {
     border: solid thin #bebebe;
     background-image: radial-gradient(#fbede9, rgba(254, 254, 254, 0.6392156863));
     opacity: 0.9;
-    z-index: -1;
   }
   .box a {
     display: flex;

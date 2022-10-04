@@ -54,7 +54,6 @@
       border: map-get($borders, borderStyle) map-get($colors, borderColor );
       @include box-bg-img;
       opacity: 0.9;
-      z-index: -1;
       a{
         display: flex;
         flex-direction: row;
