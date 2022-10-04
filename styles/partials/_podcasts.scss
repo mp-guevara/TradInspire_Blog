@@ -80,32 +80,32 @@
   }
   
   .card:nth-child(1) .face.face2 {
-      background-image: url(../../images/the_translation_company150x150.webp);
+      background-image: url(https://raw.githubusercontent.com/PaulaGuevra/TradInspire_Blog/main/images/the_translation_company150x150.webp);
       @include podcard;  
     }
   
   .card:nth-child(2) .face.face2 {
-    background-image: url(../../images/logo-en-pantuflas.webp);
+    background-image: url(https://raw.githubusercontent.com/PaulaGuevra/TradInspire_Blog/main/images/logo-en-pantuflas.webp);
     @include podcard;
   }
   
   .card:nth-child(3) .face.face2 {
-    background-image: url(../../images/meet-the-translator.webp);
+    background-image: url(https://raw.githubusercontent.com/PaulaGuevra/TradInspire_Blog/main/images/meet-the-translator.webp);
     @include podcard;
   }
 
   .card:nth-child(4) .face.face2 {
-    background-image: url(../../images/smart-habits-for-translators.webp);
+    background-image: url(https://raw.githubusercontent.com/PaulaGuevra/TradInspire_Blog/main/images/smart-habits-for-translators.webp);
     @include podcard;  
   }
 
   .card:nth-child(5) .face.face2 {
-    background-image: url(../../images/traductores-al-aire.webp);
+    background-image: url(https://raw.githubusercontent.com/PaulaGuevra/TradInspire_Blog/main/images/traductores-al-aire.webp);
     @include podcard;  
   }
 
   .card:nth-child(6) .face.face2 {
-    background-image: url(../../images/hablando-mal-y-pronto.webp);
+    background-image: url(https://raw.githubusercontent.com/PaulaGuevra/TradInspire_Blog/main/images/hablando-mal-y-pronto.webp);
     @include podcard;  
   }
 }
