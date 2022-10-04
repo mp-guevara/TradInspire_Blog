@@ -201,6 +201,11 @@ body {
   grid-template-rows: 2fr 3fr 1fr;
 }
 
+@media only screen and (max-width: 768px) {
+  .grid {
+    width: 100%;
+  }
+}
 .grid-layout {
   grid-area: main;
   align-items: center;
