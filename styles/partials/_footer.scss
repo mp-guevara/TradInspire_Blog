@@ -7,14 +7,18 @@ footer{
     position:static;
     text-align: center;
     padding:2%;
-    background: linear-gradient(to top, #fbede9, #ffffff);
-    border: thin solid #bebebe;
+    @include background-style;
+    border: map-get($borders, borderStyle) map-get($colors, borderColor );
     opacity: 0.9;
     z-index:1000;
     @extend %flexRow;
     justify-content:space-between;
     a{
       border-color: map-get($colors, borderColor );
+    }
+    #ft-log{
+      width: 105px;
+      height: 105px;
     }
     .footerDiv{
        @extend %flexRow;
@@ -37,7 +41,6 @@ footer{
          padding:10px;
          list-style: 5px;
          h4{
-          padding-bottom: 20px;
           color: map-get($colors,linksColor);
         }
       }
@@ -53,6 +56,15 @@ footer{
       }
     }
   }
+  #susc,#yes{
+    @include formstyle;
+  }
+  
+  .social{
+    width: 40px;
+    height: 40px;
+  }
+
 @media only screen and (max-width:768px) {
   footer{
     display: block;

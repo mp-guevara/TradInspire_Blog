@@ -15,7 +15,7 @@
 .secForm{
     background-color: #fdf2f2;
     border-radius: 5px;
-    border: solid thin #fcaebc;
+    border: map-get($borders, borderStyle ) #fcaebc;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
 		top: -50%;
 		width: 200%;
 		height: 200%;
-		background-color: #fbede9;
+		background-color: map-get($colors, bgColor );
         background-repeat: no-repeat;
 		background-size: 50% 50%, 50% 50%;
 		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
@@ -49,7 +49,7 @@
 		top: 6px;
 		width: calc(100% - 12px);
 		height: calc(100% - 12px);
-		background: #fbede9;
+		background:map-get($colors, bgColor );
 		border-radius: 5px;
 	}
 }
@@ -66,8 +66,8 @@
     flex-direction: column;
     flex-flow: column;
     text-align: left;
-    border: double thin #bdc991;
-    background-color: #fbede9;
+    border: double thin map-get($colors, borderColor );
+    background-color: map-get($colors, bgColor );
     padding: 30px;
 }
 
@@ -76,4 +76,7 @@
         display: inline;
         appearance: radio;
     }
+}
+#nombre, #apellido, #date, #email, #option, #opt, #tyc{
+    @include formstyle;
 }

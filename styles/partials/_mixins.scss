@@ -7,3 +7,28 @@
     top: -11111px;
     left: -11111px;
 }
+@mixin background-style {
+    background: linear-gradient(to top, #fbede9, #ffffff);
+    
+}
+@mixin bg-style {
+    background: linear-gradient(to bottom, transparent, #fbede9);    
+}
+@mixin box-bg-img {
+    background-image: radial-gradient(#fbede9, #fefefea3);
+}
+@mixin podcard {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    border: 2px solid map-get($colors, bgColor );
+}
+@mixin bg-style2 {
+    background: linear-gradient(to top, transparent, #fbede9);
+}
+@mixin formstyle {
+    position: relative;
+    z-index: 1;
+    opacity: 5;
+}

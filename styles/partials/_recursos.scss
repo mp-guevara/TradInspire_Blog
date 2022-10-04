@@ -6,43 +6,87 @@
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
-    background: linear-gradient(to bottom, transparent, #fdebe9);
+   @include bg-style;
     margin-top:  50px;
     margin-bottom: 50px;
     h2{
         text-align: center;
-        padding-top: 100px;
+        padding-top: 45px;
         text-shadow: 2px -2px 0 #ebaeae94;
-        background: linear-gradient(to top, transparent, #fbede9);
+        @include bg-style2;
       }
 }
-  
-  .secRec{
-    grid-area: main;
-    display:flex;
-    flex-direction: row;
-    justify-items: center;
-    justify-content: space-between;
-    align-content: space-between;
-    padding: 50px;
-  }
-  .divRec{
-      border: solid thin #bdc991;
-      margin-right: 10px;
-      background-color: #fdf2f2;
-      padding: 40px;
-      display:flex;
-      flex-direction: column;
-      flex: 40px;
-      justify-content: center;
-      text-align: center;
-  }
-  .divRec {
-    ul {
-        li{
-            list-style-type: none;
-            padding: auto;
-        }
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.row {
+  display:flex;
+  .col {
+    flex:1;
+    &:last-child {
+      margin-left: 1em;
     }
   }
+}
+
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px map-get($colors, linksColor );
+}
+.tab {
+  width: 100%;
+  color: map-get($colors, dropColor );
+  overflow: hidden;
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #605959c8;
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+    &:hover {
+      background: darken( #807e7e, 10%);
+    }
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: map-get($colors, linksColor );
+    background: #f6f2f1;
+    transition: all .35s;
+  }
+}
+input:checked {
+  + .tab-label {
+    background: darken(#bebebe, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+}
+ul{
+  li{
+    a{
+      text-decoration: none;
+      color: map-get($colors, linksColor );
+    }
+  }
+}
  

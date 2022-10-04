@@ -7,7 +7,8 @@
     align-items: flex-start;
     margin-top: 55px;
     margin-bottom: 55px;
-    background: radial-gradient(#fbede9, transparent);
+    background: radial-gradient(#fbede9, #bebebe80);
+    position: relative;
     h2{
       text-align: center;
       align-self: center;
@@ -37,8 +38,7 @@
       transition: 0.8s;
       h3 {
         color: #000;
-        left: cacl(100%/2);
-        margin-top: 10vh;
+        margin-top: 0vh;
         font-weight: 200;
         letter-spacing: -0.06em;
         word-spacing: 0.2em;
@@ -167,63 +167,24 @@
   
   @media only screen and (max-width: 768px){
     .mainDon{
-      position: relative;
-      z-index: -1;
+      background-image: none;
     }
-  //   body{
-  //     margin:0px auto;
-  //     padding:0px;
-  //     background-attachment: fixed;
-  //   }
-  //   #logo{
-  //     padding-left: calc(100vw/2);
-  //   }
-  //   header{
-  //     position: static;
-  //     .navbar{
-  //       position: static;
-  //       width: 100%;
-  //       ul{
-  //           li{
-  //               padding-left: 20px;
-  //             }
-  //       }
-  //     }
-  //   }
-  //   .dropdown-content { 
-  //     font-stretch: extra-expanded;
-  //     font-weight: 200;
-  //     font-variant-caps: all-small-caps;
-  //     line-height: 50px;
-  //     width: 100vw;
-  //     z-index: 4;
-  //     ul{
-  //       align-content: stretch;
-  //       align-items: stretch;
-  //       width: 100%;
-  //       overflow: auto;
-  //       &:hover{
-  //        z-index: 10;
-  //       }
-  //       li{
-  //         font-size: x-large;
-  //       }
-  //     }
-  // } 
-  // .hidden{
-  //   @include hide-element;
-  // }
-  .CSSgal{
-    display:flex;
-    flex-direction: column;
-    .slider{
+    h2{
+      text-rendering: optimizeLegibility;
+      background-color: #bebebe3b;
+
+    }
+    .CSSgal{
+      display:flex;
+      flex-direction: column;
+      .slider{
       display: flex;
       flex-direction: column;
       .bg1, .bg2, .bg3, .bg4{
         display: block;
-        background-color: linear-gradient(to bottom, #fbede9, #ffffff);
+        background-image: radial-gradient(#fbede9,#bebebe80);
         margin: 5px 10px 5px 0px;
-        border: thin solid map-get($colors, borderColor);
+        border: map-get($borders,borderStyle ) map-get($colors, borderColor ) ;
       }
       .prevNext{
        @include hide-element;
@@ -236,6 +197,7 @@
   .CSSgal{
     .prevNext a{
       @include hide-element;
+      transition: none;
     }
   } 
 
@@ -244,6 +206,13 @@
       @include hide-element;
     }
   }
+
+  #s1:target ~ .slider {transform: none;}
+  #s2:target ~ .slider {transform: none;}
+  #s3:target ~ .slider {transform: none;}
+  #s4:target ~ .slider {transform: none;}
+  
+
 }
     
   
